@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Font Generator</title>
+    <title>LinkedIn Font Generator - Stylish Text for Profiles & Posts</title>
+    <meta name="description" content="Generate stylish Unicode text for LinkedIn profiles and posts with various font styles like bold, italic, script, and more. Easy copy-paste.">
+    <meta name="keywords" content="LinkedIn font generator, Unicode text generator, fancy text, social media fonts, text styler, LinkedIn styles, LinkedIn text formatting">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>LinkedIn Font Generator</h1>
+        <h1>LinkedIn Font Generator - Create Stylish Text</h1>
         <div class="input-container">
-            <input type="text" id="inputText" placeholder="Enter your text here">
+            <input type="text" id="inputText" placeholder="Enter your text here to style it">
         </div>
         <div class="button-container">
-            <button data-style="bold">Bold</button>
-            <button data-style="italic">Italic</button>
-            <button data-style="boldItalic">Bold Italic</button>
-            <button data-style="script">Script</button>
-            <button data-style="boldScript">Bold Script</button>
-            <button data-style="doubleUnderline">Double Underline</button>
+            <button data-style="bold" aria-label="Apply Bold Style">Bold</button>
+            <button data-style="italic" aria-label="Apply Italic Style">Italic</button>
+            <button data-style="boldItalic" aria-label="Apply Bold Italic Style">Bold Italic</button>
+            <button data-style="script" aria-label="Apply Script Style">Script</button>
+            <button data-style="boldScript" aria-label="Apply Bold Script Style">Bold Script</button>
+            <button data-style="doubleUnderline" aria-label="Apply Double Underline Style">Double Underline</button>
         </div>
-        <div class="output-container" id="output"></div>
+        <div class="output-container" id="output" aria-live="polite">Your styled text will appear here.</div>
         <div class="copy-container">
-            <button id="copyButton">Copy to Clipboard</button>
+            <button id="copyButton" aria-label="Copy styled text to clipboard">Copy to Clipboard</button>
         </div>
         <footer>
-            <p>Developed by <a href="https://nomanmohammad.com/" target="_blank">Noman Mohammad</a></p>
+            <p>&copy; 2024 LinkedIn Font Generator. All rights reserved.</p>
+            <p>Developed by <a href="https://nomanmohammad.com/" target="_blank" rel="noopener noreferrer">Noman Mohammad</a>. A tool to enhance your online presence.</p>
         </footer>
     </div>
     <script src="scripts.js"></script>

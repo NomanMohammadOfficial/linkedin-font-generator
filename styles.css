@@ -1,8 +1,9 @@
-/* Updated styles with a light green background and responsive improvements */
+/* Updated styles with a dark theme and responsive improvements */
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #e0f7e9; /* Light green background */
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
     margin: 0;
     padding: 0;
     display: flex;
@@ -27,106 +28,133 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(270deg, #e0f7e9, #c4e7d4, #a8d8bf, #e0f7e9);
+    background: linear-gradient(270deg, #1e1e1e, #2c2c2c, #3a3a3a, #1e1e1e); /* Darker animated background */
     background-size: 400% 400%;
     z-index: -1;
     animation: backgroundAnimation 15s ease infinite;
 }
 
 .container {
-    background-color: #fce49d;
+    background-color: #1e1e1e; /* Slightly lighter dark background for container */
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+    padding: 2.5rem; /* Increased padding */
     width: 90%;
-    max-width: 600px;
+    max-width: 650px; /* Slightly increased max-width */
     text-align: center;
     transition: all 0.3s ease;
 }
 
 h1 {
-    color: #403aff;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    color: #bb86fc; /* Light purple for heading */
+    margin-bottom: 2rem; /* Increased margin */
+    font-size: 2rem; /* Slightly larger font size */
 }
 
 .input-container {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Increased margin */
 }
 
 input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.85rem; /* Increased padding */
     font-size: 1rem;
-    border: 1px solid #0a66c2;
-    border-radius: 4px;
+    border: 1px solid #3a3a3a; /* Darker border */
+    border-radius: 6px; /* Slightly more rounded corners */
+    background-color: #2c2c2c; /* Dark input background */
+    color: #e0e0e0; /* Light text color for input */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added transitions */
+}
+
+input:focus {
+    border-color: #bb86fc; /* Highlight color on focus */
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.25); /* Subtle glow on focus */
 }
 
 .button-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    margin-top: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Adjusted minmax for button sizing */
+    gap: 0.75rem; /* Increased gap */
+    margin-bottom: 1.5rem; /* Increased margin */
+    margin-top: 10px; /* Increased margin */
     grid-column:auto;
 }
 
 button {
-    background-color: #a70fff;
-    color: rgb(255, 255, 255);
-    border: solid;
-    border-radius: 12px;
-    padding: 0.75rem;
+    background-color: #3a3a3a; /* Medium dark background for buttons */
+    color: #e0e0e0; /* Light text for buttons */
+    border: 1px solid #555555; /* Darker border for buttons */
+    border-radius: 8px; /* Consistent rounded corners */
+    padding: 0.85rem; /* Adjusted padding */
     font-size: 0.9rem;
+    font-weight: 600; /* Bolder font */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; /* Refined transitions */
     margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 button:hover {
-    background-color: #004182;
+    background-color: #555555; /* Lighter background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.97); /* Slightly more pronounced active effect */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow when active */
 }
 
 .output-container {
-    background-color: #f3f2ef;
-    border-radius: 4px;
-    padding: 1rem;
-    min-height: 60px;
+    background-color: #2c2c2c; /* Dark background for output */
+    color: #e0e0e0; /* Light text for output */
+    border-radius: 6px; /* Consistent rounded corners */
+    padding: 1.25rem; /* Increased padding */
+    min-height: 70px; /* Adjusted min-height */
     word-break: break-all;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Added transition */
+    line-height: 1.6; /* Improved readability */
 }
 
-.copy-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.75rem 1rem;
+.copy-button { /* Generic styling for copy button, specific ID #copyButton can override if needed */
+    background-color: #03dac6; /* Teal for copy button */
+    color: #121212; /* Dark text for copy button for contrast */
+    padding: 0.85rem 1.2rem; /* Adjusted padding */
     border: none;
-    border-radius: 4px;
+    border-radius: 8px; /* Consistent rounded corners */
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 1.5rem; /* Increased margin */
     font-size: 0.9rem;
-    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 600; /* Bolder font */
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; /* Refined transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .copy-button:hover {
-    background-color: #45a049;
+    background-color: #018786; /* Darker teal on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .copy-button:active {
-    transform: scale(0.98);
+    transform: scale(0.97); /* Slightly more pronounced active effect */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow when active */
 }
 
 footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    margin-top: 3rem; /* Slightly more margin */
+    padding: 1.5rem 1rem; /* Added padding for internal spacing */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    color: #aaaaaa; /* Lighter gray for general footer text */
+    text-align: center;
+    border-top: 1px solid #3a3a3a; /* Subtle top border to separate */
+}
+
+footer p {
+    margin: 0.3rem 0; /* Space out the paragraphs within the footer */
 }
 
 footer a {
-    color: #0a66c2;
+    color: #bb86fc; /* Light purple for links */
     text-decoration: none;
 }
 
@@ -134,34 +162,54 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Ensure high contrast for placeholder text in dark mode */
+input::placeholder {
+    color: #888888; /* Lighter gray for placeholder text */
+}
+
 @media (max-width: 600px) {
     .container {
-        padding: 1.5rem;
+        padding: 2rem; /* Adjusted padding for smaller screens */
         max-width: 100%;
-        border-radius: 8px;
+        border-radius: 10px; /* Adjusted border-radius */
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem; /* Adjusted font size */
     }
+
+    .button-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller buttons on small screens */
+        gap: 0.5rem; /* Reduced gap */
+    }
+
+    button, .copy-button { /* Apply to all buttons including copy */
+        padding: 0.75rem; /* Adjust padding */
+        font-size: 0.85rem; /* Adjust font size */
+    }
+
 
     .output-container {
         font-size: 1rem;
-        padding: 0.75rem;
-        min-height: 50px;
+        padding: 1rem; /* Adjusted padding */
+        min-height: 60px; /* Adjusted min-height */
     }
 
-    #copyButton {
-        padding: 0.5rem;
-        font-size: 0.8rem;
-        margin-top: 5px;
-        color: red;
+    #copyButton { /* Specific styling for #copyButton if still needed, otherwise rely on .copy-button */
+        padding: 0.75rem; /* Consistent padding */
+        font-size: 0.85rem; /* Consistent font size */
+        margin-top: 10px; /* Adjusted margin */
+        /* color: red; Removed as it might conflict with dark theme aesthetics, rely on .copy-button styles */
     }
 
-    .copy-container {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
-        margin-top: 5px;
-        color: #45a049;
+    .copy-container { /* This class wraps the copy button */
+        /* padding: 0.5rem 0.75rem; No longer needed if copyButton itself is styled well */
+        font-size: 0.8rem; /* Retained for potential other text */
+        margin-top: 10px; /* Adjusted margin */
+        /* color: #03dac6; Color should be inherited or set on text elements directly */
+    }
+
+    footer p:last-child { /* Reduce margin for the last paragraph if desired, or specific styling */
+        margin-bottom: 0;
     }
 }
